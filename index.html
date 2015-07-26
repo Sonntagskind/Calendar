@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calendar</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<div class="wrap">
+
+		<header class="header">
+
+			<a href="#" class="button" id="add"><span>Add</span></a>
+
+      <!--Fast add event window-->
+      <div id="fastAdd" data-hidden="">
+        <form>
+            <input data-type="text" placeholder="Event" id="fastAddEvent" maxlength="15">
+            <input data-type="number" placeholder="Day" id="fastAddDate" maxlength="2">
+
+            <a href="#" id="ok">OK</a>
+            <a href="#" id="fastAddClose">&#10006;</a>
+        </form>
+      </div>
+
+			<a href="#" class="button" id="refresh"><span>Refresh</span></a>
+			
+
+		</header><!--Header end-->
+
+		<div class="container">
+      <div id="month">
+  			<a href="#" id="previous" alt="previous month" title="Previous month"><img src="images/arrow.svg"></a>
+  			<span id="currentmonth"></span>
+  			<a href="#" id="next" alt="next month" title="Next month"><img src="images/arrow.svg"></a>
+  			<a href="#" id="nowDay">Today</a>
+  		</div><!--Month end-->
+    </div><!--Container end-->
+    
+    <div id="cal">
+  
+    </div>
+
+    <!--Add event window-->
+    <div id="addevent" data-hidden="">
+        <form>
+          <input data-type="text" placeholder="Event" id="event" maxlength="15">
+          <input placeholder="Day, month, year" id="event_date" readonly>
+          <input data-type="text" placeholder="Participants" id="participants"  maxlength="30" style="overflow:hidden">
+            <textarea placeholder="Description" id="description"></textarea>
+          <a href="#" id="done">Done</a>
+          <a href="#" id="remove">Remove</a>
+          <a href="#" id="close">&#10006;</a>
+        </form>
+    </div>
+
+<!--Fast add event window-->
+   <!--  <div id="fastAdd" data-hidden="">
+      <form>
+          <input data-type="text" placeholder="Event" id="fastAddEvent" maxlength="15">
+          <input data-type="number" placeholder="Day" id="fastAddDate" maxlength="2">
+
+          <a href="#" id="ok">OK</a>
+          <a href="#" id="fastAddClose">&#10006;</a>
+      </form>
+    </div> -->
+
+<script src="calendar.js"></script>
+  
+</body>
+</html>
